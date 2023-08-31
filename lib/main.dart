@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:harrisharun_portfolio/sidebar.dart';
 
 void main(List<String> args) {
   runApp(MaterialApp(
@@ -13,6 +14,7 @@ class landingpage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFF1e1e28),
       body: Container(
         child: Row(
           children: [
@@ -22,52 +24,13 @@ class landingpage extends StatelessWidget {
                   child: sidebar(),
                 )),
             Expanded(
-                flex: 7,
+                flex: 8,
                 child: Container(
                   color: Colors.white,
                 ))
           ],
         ),
       ),
-    );
-  }
-}
-
-class sidebar extends StatelessWidget {
-  const sidebar({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          padding: EdgeInsets.all(10),
-          height: 200,
-          width: double.infinity,
-          color: Color(0xFF242430),
-          child: Column(
-            children: [
-              CircleAvatar(
-                radius: 30,
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              Text(
-                "HarrishArun",
-                style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Text("Developer")
-            ],
-          ),
-        )
-      ],
     );
   }
 }
